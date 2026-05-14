@@ -1,535 +1,629 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Data Analyst Interview Clearance</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-        scroll-behavior: smooth;
+  <title>Data Analyst Interview Clearance</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    /* HEADER */
+
+    header{
+      background:linear-gradient(135deg,#2563eb,#7c3aed);
+      padding:70px 20px;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:3rem;
+      margin-bottom:20px;
+    }
+
+    header p{
+      max-width:800px;
+      margin:auto;
+      font-size:1.2rem;
+    }
+
+    .hero-image{
+      width:90%;
+      max-width:750px;
+      margin-top:35px;
+      border-radius:20px;
+      object-fit:cover;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    /* NAVBAR */
+
+    nav{
+      background:#111827;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      list-style:none;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#60a5fa;
+    }
+
+    /* CONTAINER */
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+      padding:40px 0;
+    }
+
+    /* CARDS */
+
+    .day-card{
+      background:#1e293b;
+      margin-bottom:35px;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.3);
+      transition:0.3s;
+    }
+
+    .day-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .day-card h2{
+      color:#60a5fa;
+      margin-bottom:15px;
+    }
+
+    .section-title{
+      margin-top:20px;
+      margin-bottom:10px;
+      color:#facc15;
+    }
+
+    ul{
+      margin-left:20px;
+      margin-top:10px;
+    }
+
+    li{
+      margin-bottom:8px;
+    }
+
+    .formula-box{
+      background:#0f172a;
+      padding:18px;
+      border-radius:12px;
+      margin-top:15px;
+      border-left:5px solid #3b82f6;
+      overflow-x:auto;
+      line-height:2;
+    }
+
+    .highlight{
+      color:#facc15;
+      font-weight:bold;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:20px;
+    }
+
+    table th,
+    table td{
+      border:1px solid #334155;
+      padding:14px;
+      text-align:center;
+    }
+
+    table th{
+      background:#2563eb;
+    }
+
+    footer{
+      background:#111827;
+      text-align:center;
+      padding:30px;
+      margin-top:40px;
+    }
+
+    footer h3{
+      margin-bottom:10px;
+    }
+
+    hr{
+      margin:20px 0;
+      border:1px solid #334155;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:2rem;
       }
 
-      body {
-        background: #0f172a;
-        color: white;
-        line-height: 1.6;
+      header p{
+        font-size:1rem;
       }
 
-      /* HEADER */
-
-      header {
-        background: linear-gradient(135deg, #2563eb, #7c3aed);
-        padding: 70px 20px;
-        text-align: center;
+      nav ul{
+        gap:15px;
       }
 
-      header h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
+      .day-card{
+        padding:20px;
       }
+    }
+  </style>
+</head>
 
-      header p {
-        font-size: 1.2rem;
-        max-width: 800px;
-        margin: auto;
-      }
+<body>
 
-      .hero-image {
-        width: 90%;
-        max-width: 750px;
-        margin-top: 35px;
-        border-radius: 20px;
-        object-fit: cover;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      }
+  <!-- HEADER -->
 
-      /* NAVBAR */
+  <header>
 
-      nav {
-        background: #111827;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 15px;
-      }
+    <h1>Data Analyst Interview Clearance</h1>
 
-      nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        list-style: none;
-        flex-wrap: wrap;
-      }
+    <p>
+      7-Day Excel & Google Sheets Preparation Roadmap for Data Analyst Interviews
+    </p>
 
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-      }
+    <img
+      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+      alt="Data Analyst Interview Preparation"
+      class="hero-image"
+    >
 
-      nav ul li a:hover {
-        color: #60a5fa;
-      }
+  </header>
 
-      /* CONTAINER */
+  <!-- NAVIGATION -->
 
-      .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-        padding: 40px 0;
-      }
+  <nav>
+    <ul>
+      <li><a href="#day1">Day 1</a></li>
+      <li><a href="#day2">Day 2</a></li>
+      <li><a href="#day3">Day 3</a></li>
+      <li><a href="#day4">Day 4</a></li>
+      <li><a href="#day5">Day 5</a></li>
+      <li><a href="#day6">Day 6</a></li>
+      <li><a href="#day7">Day 7</a></li>
+      <li><a href="#interview">Interview Q&A</a></li>
+    </ul>
+  </nav>
 
-      /* DAY CARDS */
+  <!-- MAIN CONTENT -->
 
-      .day-card {
-        background: #1e293b;
-        margin-bottom: 35px;
-        padding: 30px;
-        border-radius: 18px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        transition: 0.3s;
-      }
+  <div class="container">
 
-      .day-card:hover {
-        transform: translateY(-5px);
-      }
+    <!-- DAY 1 -->
 
-      .day-card h2 {
-        color: #60a5fa;
-        margin-bottom: 15px;
-      }
+    <div class="day-card" id="day1">
 
-      .section-title {
-        margin-top: 20px;
-        color: #cbd5e1;
-        font-size: 1.1rem;
-      }
-
-      ul {
-        margin-left: 20px;
-        margin-top: 10px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      /* FORMULA BOX */
-
-      .formula-box {
-        background: #0f172a;
-        padding: 15px;
-        border-radius: 12px;
-        margin-top: 15px;
-        border-left: 5px solid #3b82f6;
-        overflow-x: auto;
-        line-height: 2;
-      }
-
-      /* HIGHLIGHT */
-
-      .highlight {
-        color: #facc15;
-        font-weight: bold;
-      }
-
-      /* TABLE */
-
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-
-      table th,
-      table td {
-        border: 1px solid #334155;
-        padding: 14px;
-        text-align: center;
-      }
-
-      table th {
-        background: #2563eb;
-      }
-
-      /* FOOTER */
-
-      footer {
-        background: #111827;
-        text-align: center;
-        padding: 30px;
-        margin-top: 40px;
-      }
-
-      footer h3 {
-        margin-bottom: 10px;
-      }
-
-      /* RESPONSIVE */
-
-      @media (max-width: 768px) {
-        header h1 {
-          font-size: 2rem;
-        }
-
-        header p {
-          font-size: 1rem;
-        }
-
-        nav ul {
-          gap: 15px;
-        }
-
-        .day-card {
-          padding: 20px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- HEADER -->
-
-    <header>
-      <h1>Data Analyst Interview Clearance</h1>
+      <h2>Day 1 — Excel & Google Sheets Foundations</h2>
 
       <p>
-        7-Day Excel & Google Sheets Preparation Roadmap for Data Analyst
-        Interviews
+        <span class="highlight">Main Goal:</span>
+        Understand spreadsheet basics and core formulas.
       </p>
 
-      <img
-        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-        alt="Interview Preparation"
-        class="hero-image"
-      />
-    </header>
+      <h3 class="section-title">Topics</h3>
 
-    <!-- NAVBAR -->
-
-    <nav>
       <ul>
-        <li><a href="#day1">Day 1</a></li>
-        <li><a href="#day2">Day 2</a></li>
-        <li><a href="#day3">Day 3</a></li>
-        <li><a href="#day4">Day 4</a></li>
-        <li><a href="#day5">Day 5</a></li>
-        <li><a href="#day6">Day 6</a></li>
-        <li><a href="#day7">Day 7</a></li>
+        <li>Rows, Columns, Cells</li>
+        <li>Formatting</li>
+        <li>Autofill</li>
+        <li>Freeze Panes</li>
+        <li>Sorting & Filtering</li>
+        <li>Relative vs Absolute References</li>
       </ul>
-    </nav>
 
-    <!-- MAIN CONTENT -->
+      <h3 class="section-title">Formulas</h3>
 
-    <div class="container">
-      <!-- DAY 1 -->
-
-      <div class="day-card" id="day1">
-        <h2>Day 1 — Excel & Google Sheets Foundations</h2>
-
-        <p>
-          <span class="highlight">Main Goal:</span>
-          Understand spreadsheet basics and core formulas.
-        </p>
-
-        <h3 class="section-title">Topics to Complete</h3>
-
-        <ul>
-          <li>Rows, Columns, Cells</li>
-          <li>Formatting</li>
-          <li>Autofill</li>
-          <li>Freeze Panes</li>
-          <li>Sorting & Filtering</li>
-          <li>Relative vs Absolute References</li>
-        </ul>
-
-        <h3 class="section-title">Formulas</h3>
-
-        <div class="formula-box">
-          SUM<br />
-          AVERAGE<br />
-          MIN<br />
-          MAX<br />
-          COUNT<br />
-          COUNTA<br />
-          ROUND<br />
-          ROUNDUP<br />
-          ROUNDDOWN
-        </div>
-
-        <h3 class="section-title">Practice Target</h3>
-
-        <ul>
-          <li>Create expense tracker</li>
-          <li>Create marksheet</li>
-          <li>Create sales sheet</li>
-        </ul>
+      <div class="formula-box">
+        SUM<br>
+        AVERAGE<br>
+        MIN<br>
+        MAX<br>
+        COUNT<br>
+        COUNTA<br>
+        ROUND<br>
+        ROUNDUP<br>
+        ROUNDDOWN
       </div>
 
-      <!-- DAY 2 -->
+      <h3 class="section-title">Practice Target</h3>
 
-      <div class="day-card" id="day2">
-        <h2>Day 2 — Conditional & Logical Formulas</h2>
+      <ul>
+        <li>Create expense tracker</li>
+        <li>Create marksheet</li>
+        <li>Create sales sheet</li>
+      </ul>
 
-        <p>
-          <span class="highlight">Main Goal:</span>
-          Learn condition-based analysis.
-        </p>
-
-        <div class="formula-box">
-          IF<br />
-          IFS<br />
-          AND<br />
-          OR<br />
-          NOT<br />
-          IFERROR<br />
-          COUNTIF<br />
-          COUNTIFS<br />
-          SUMIF<br />
-          SUMIFS<br />
-          AVERAGEIF<br />
-          AVERAGEIFS
-        </div>
-
-        <h3 class="section-title">Practice Target</h3>
-
-        <ul>
-          <li>Employee bonus calculator</li>
-          <li>Attendance tracker</li>
-          <li>Sales performance sheet</li>
-        </ul>
-      </div>
-
-      <!-- DAY 3 -->
-
-      <div class="day-card" id="day3">
-        <h2>Day 3 — Lookup & Data Retrieval</h2>
-
-        <p>
-          <span class="highlight">Main Goal:</span>
-          Master lookup formulas.
-        </p>
-
-        <div class="formula-box">
-          VLOOKUP<br />
-          HLOOKUP<br />
-          XLOOKUP<br />
-          INDEX<br />
-          MATCH<br />
-          INDEX + MATCH
-        </div>
-
-        <h3 class="section-title">Practice Target</h3>
-
-        <ul>
-          <li>Employee database search</li>
-          <li>Product lookup system</li>
-          <li>Student result retrieval</li>
-        </ul>
-      </div>
-
-      <!-- DAY 4 -->
-
-      <div class="day-card" id="day4">
-        <h2>Day 4 — Text & Data Cleaning</h2>
-
-        <p>
-          <span class="highlight">Main Goal:</span>
-          Learn cleaning messy datasets.
-        </p>
-
-        <div class="formula-box">
-          LEFT<br />
-          RIGHT<br />
-          MID<br />
-          LEN<br />
-          TRIM<br />
-          SUBSTITUTE<br />
-          REPLACE<br />
-          FIND<br />
-          SEARCH<br />
-          UPPER<br />
-          LOWER<br />
-          PROPER<br />
-          TEXTJOIN<br />
-          CONCAT
-        </div>
-
-        <h3 class="section-title">Practice Target</h3>
-
-        <ul>
-          <li>Clean customer names</li>
-          <li>Clean emails</li>
-          <li>Clean phone numbers</li>
-          <li>Clean product IDs</li>
-        </ul>
-      </div>
-
-      <!-- DAY 5 -->
-
-      <div class="day-card" id="day5">
-        <h2>Day 5 — Date, Time & Dynamic Functions</h2>
-
-        <p>
-          <span class="highlight">Main Goal:</span>
-          Handle dates and dynamic reports.
-        </p>
-
-        <div class="formula-box">
-          TODAY<br />
-          NOW<br />
-          DATE<br />
-          YEAR<br />
-          MONTH<br />
-          DAY<br />
-          DATEDIF<br />
-          NETWORKDAYS<br />
-          EOMONTH
-        </div>
-
-        <h3 class="section-title">Dynamic Functions</h3>
-
-        <div class="formula-box">
-          FILTER<br />
-          SORT<br />
-          UNIQUE<br />
-          SEQUENCE<br />
-          SORTBY
-        </div>
-
-        <h3 class="section-title">Google Sheets Special</h3>
-
-        <div class="formula-box">
-          ARRAYFORMULA<br />
-          QUERY<br />
-          IMPORTRANGE<br />
-          SPARKLINE<br />
-          GOOGLETRANSLATE
-        </div>
-      </div>
-
-      <!-- DAY 6 -->
-
-      <div class="day-card" id="day6">
-        <h2>Day 6 — Pivot Tables, Charts & Dashboards</h2>
-
-        <h3 class="section-title">Topics</h3>
-
-        <ul>
-          <li>Pivot Tables</li>
-          <li>Pivot Charts</li>
-          <li>Slicers</li>
-          <li>Conditional Formatting</li>
-          <li>Data Validation</li>
-          <li>Named Ranges</li>
-        </ul>
-
-        <h3 class="section-title">Charts</h3>
-
-        <ul>
-          <li>Bar Chart</li>
-          <li>Pie Chart</li>
-          <li>Line Chart</li>
-          <li>KPI Cards</li>
-        </ul>
-
-        <h3 class="section-title">Dashboard Practice</h3>
-
-        <ul>
-          <li>Sales Dashboard</li>
-          <li>HR Dashboard</li>
-        </ul>
-      </div>
-
-      <!-- DAY 7 -->
-
-      <div class="day-card" id="day7">
-        <h2>Day 7 — Real Projects + Interview Preparation</h2>
-
-        <h3 class="section-title">Projects</h3>
-
-        <ul>
-          <li>Sales Analytics Dashboard</li>
-          <li>HR Analytics Dashboard</li>
-        </ul>
-
-        <h3 class="section-title">Interview Questions</h3>
-
-        <ul>
-          <li>Difference between VLOOKUP and XLOOKUP</li>
-          <li>SUMIF vs SUMIFS</li>
-          <li>COUNT vs COUNTA</li>
-          <li>Relative vs Absolute Reference</li>
-          <li>What is QUERY?</li>
-          <li>What is ARRAYFORMULA?</li>
-        </ul>
-      </div>
-
-      <!-- DAILY STUDY ROUTINE -->
-
-      <div class="day-card">
-        <h2>Daily Study Routine</h2>
-
-        <table>
-          <tr>
-            <th>Activity</th>
-            <th>Time</th>
-          </tr>
-
-          <tr>
-            <td>Learn Concepts</td>
-            <td>2 Hours</td>
-          </tr>
-
-          <tr>
-            <td>Formula Practice</td>
-            <td>3 Hours</td>
-          </tr>
-
-          <tr>
-            <td>Mini Project</td>
-            <td>2 Hours</td>
-          </tr>
-
-          <tr>
-            <td>Revision</td>
-            <td>1 Hour</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- MUST MASTER -->
-
-      <div class="day-card">
-        <h2>Highest Priority Formulas</h2>
-
-        <div class="formula-box">
-          XLOOKUP<br />
-          INDEX MATCH<br />
-          SUMIFS<br />
-          COUNTIFS<br />
-          IFERROR<br />
-          FILTER<br />
-          QUERY<br />
-          ARRAYFORMULA
-        </div>
-      </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- DAY 2 -->
 
-    <footer>
-      <h3>Data Analyst Interview Clearance</h3>
+    <div class="day-card" id="day2">
 
-      <p>Created for Data Analyst Preparation & Interview Success</p>
-    </footer>
-  </body>
+      <h2>Day 2 — Conditional & Logical Formulas</h2>
+
+      <div class="formula-box">
+        IF<br>
+        IFS<br>
+        AND<br>
+        OR<br>
+        NOT<br>
+        IFERROR<br>
+        COUNTIF<br>
+        COUNTIFS<br>
+        SUMIF<br>
+        SUMIFS<br>
+        AVERAGEIF<br>
+        AVERAGEIFS
+      </div>
+
+      <h3 class="section-title">Practice</h3>
+
+      <ul>
+        <li>Employee bonus calculator</li>
+        <li>Attendance tracker</li>
+        <li>Sales performance sheet</li>
+      </ul>
+
+    </div>
+
+    <!-- DAY 3 -->
+
+    <div class="day-card" id="day3">
+
+      <h2>Day 3 — Lookup & Data Retrieval</h2>
+
+      <div class="formula-box">
+        VLOOKUP<br>
+        HLOOKUP<br>
+        XLOOKUP<br>
+        INDEX<br>
+        MATCH<br>
+        INDEX + MATCH
+      </div>
+
+      <h3 class="section-title">Practice</h3>
+
+      <ul>
+        <li>Employee database search</li>
+        <li>Product lookup system</li>
+        <li>Student result retrieval</li>
+      </ul>
+
+    </div>
+
+    <!-- DAY 4 -->
+
+    <div class="day-card" id="day4">
+
+      <h2>Day 4 — Text & Data Cleaning</h2>
+
+      <div class="formula-box">
+        LEFT<br>
+        RIGHT<br>
+        MID<br>
+        LEN<br>
+        TRIM<br>
+        SUBSTITUTE<br>
+        REPLACE<br>
+        FIND<br>
+        SEARCH<br>
+        UPPER<br>
+        LOWER<br>
+        PROPER<br>
+        TEXTJOIN<br>
+        CONCAT
+      </div>
+
+      <h3 class="section-title">Practice</h3>
+
+      <ul>
+        <li>Clean customer names</li>
+        <li>Clean emails</li>
+        <li>Clean phone numbers</li>
+        <li>Clean product IDs</li>
+      </ul>
+
+    </div>
+
+    <!-- DAY 5 -->
+
+    <div class="day-card" id="day5">
+
+      <h2>Day 5 — Date, Time & Dynamic Functions</h2>
+
+      <div class="formula-box">
+        TODAY<br>
+        NOW<br>
+        DATE<br>
+        YEAR<br>
+        MONTH<br>
+        DAY<br>
+        DATEDIF<br>
+        NETWORKDAYS<br>
+        EOMONTH
+      </div>
+
+      <h3 class="section-title">Dynamic Functions</h3>
+
+      <div class="formula-box">
+        FILTER<br>
+        SORT<br>
+        UNIQUE<br>
+        SEQUENCE<br>
+        SORTBY
+      </div>
+
+      <h3 class="section-title">Google Sheets Special</h3>
+
+      <div class="formula-box">
+        ARRAYFORMULA<br>
+        QUERY<br>
+        IMPORTRANGE<br>
+        SPARKLINE<br>
+        GOOGLETRANSLATE
+      </div>
+
+    </div>
+
+    <!-- DAY 6 -->
+
+    <div class="day-card" id="day6">
+
+      <h2>Day 6 — Pivot Tables, Charts & Dashboards</h2>
+
+      <ul>
+        <li>Pivot Tables</li>
+        <li>Pivot Charts</li>
+        <li>Slicers</li>
+        <li>Conditional Formatting</li>
+        <li>Data Validation</li>
+        <li>Named Ranges</li>
+      </ul>
+
+      <h3 class="section-title">Charts</h3>
+
+      <ul>
+        <li>Bar Chart</li>
+        <li>Pie Chart</li>
+        <li>Line Chart</li>
+        <li>KPI Cards</li>
+      </ul>
+
+      <h3 class="section-title">Dashboard Practice</h3>
+
+      <ul>
+        <li>Sales Dashboard</li>
+        <li>HR Dashboard</li>
+      </ul>
+
+    </div>
+
+    <!-- DAY 7 -->
+
+    <div class="day-card" id="day7">
+
+      <h2>Day 7 — Real Projects + Interview Preparation</h2>
+
+      <ul>
+        <li>Sales Analytics Dashboard</li>
+        <li>HR Analytics Dashboard</li>
+      </ul>
+
+      <h3 class="section-title">Important Questions</h3>
+
+      <ul>
+        <li>Difference between VLOOKUP and XLOOKUP</li>
+        <li>SUMIF vs SUMIFS</li>
+        <li>COUNT vs COUNTA</li>
+        <li>What is QUERY?</li>
+        <li>What is ARRAYFORMULA?</li>
+      </ul>
+
+    </div>
+
+    <!-- DAILY ROUTINE -->
+
+    <div class="day-card">
+
+      <h2>Daily Study Routine</h2>
+
+      <table>
+
+        <tr>
+          <th>Activity</th>
+          <th>Time</th>
+        </tr>
+
+        <tr>
+          <td>Learn Concepts</td>
+          <td>2 Hours</td>
+        </tr>
+
+        <tr>
+          <td>Formula Practice</td>
+          <td>3 Hours</td>
+        </tr>
+
+        <tr>
+          <td>Mini Project</td>
+          <td>2 Hours</td>
+        </tr>
+
+        <tr>
+          <td>Revision</td>
+          <td>1 Hour</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+    <!-- INTERVIEW QUESTIONS -->
+
+    <div class="day-card" id="interview">
+
+      <h2>Excel & Google Sheets Interview Questions & Answers</h2>
+
+      <h3 class="section-title">1. Difference between COUNT and COUNTA?</h3>
+
+      <div class="formula-box">
+        COUNT counts only numeric values.<br>
+        COUNTA counts all non-empty cells.
+      </div>
+
+      <h3 class="section-title">2. Difference between SUMIF and SUMIFS?</h3>
+
+      <div class="formula-box">
+        SUMIF works with one condition.<br>
+        SUMIFS works with multiple conditions.
+      </div>
+
+      <h3 class="section-title">3. What is VLOOKUP?</h3>
+
+      <div class="formula-box">
+        VLOOKUP searches vertically in a table and returns matching values.<br><br>
+
+        Example:<br>
+        =VLOOKUP(101,A2:C10,2,FALSE)
+      </div>
+
+      <h3 class="section-title">4. Why is XLOOKUP better than VLOOKUP?</h3>
+
+      <div class="formula-box">
+        XLOOKUP can search left and right.<br>
+        It is more flexible and does not need a column number.
+      </div>
+
+      <h3 class="section-title">5. Explain INDEX MATCH</h3>
+
+      <div class="formula-box">
+        INDEX MATCH is more dynamic and powerful than VLOOKUP.<br><br>
+
+        Example:<br>
+        =INDEX(B2:B10,MATCH(101,A2:A10,0))
+      </div>
+
+      <h3 class="section-title">6. What is IFERROR?</h3>
+
+      <div class="formula-box">
+        IFERROR handles formula errors and displays custom messages.<br><br>
+
+        Example:<br>
+        =IFERROR(A1/B1,\"Error\")
+      </div>
+
+      <h3 class="section-title">7. What is ARRAYFORMULA?</h3>
+
+      <div class="formula-box">
+        ARRAYFORMULA performs calculations on entire ranges automatically.<br><br>
+
+        Example:<br>
+        =ARRAYFORMULA(A1:A10*B1:B10)
+      </div>
+
+      <h3 class="section-title">8. What is QUERY Function?</h3>
+
+      <div class="formula-box">
+        QUERY retrieves filtered and structured data similar to SQL.<br><br>
+
+        Example:<br>
+        =QUERY(A1:C10,\"SELECT A,B WHERE C>100\")
+      </div>
+
+      <h3 class="section-title">9. Difference between Excel and Google Sheets?</h3>
+
+      <div class="formula-box">
+        Excel is faster for large datasets.<br>
+        Google Sheets is better for collaboration and cloud access.
+      </div>
+
+      <h3 class="section-title">10. What are Pivot Tables?</h3>
+
+      <div class="formula-box">
+        Pivot Tables summarize and analyze large datasets quickly.
+      </div>
+
+      <h3 class="section-title">11. How would you clean messy datasets?</h3>
+
+      <div class="formula-box">
+        Use TRIM, CLEAN, SUBSTITUTE, PROPER and remove duplicates.
+      </div>
+
+      <h3 class="section-title">12. Most Important Topics</h3>
+
+      <div class="formula-box">
+        XLOOKUP<br>
+        INDEX MATCH<br>
+        SUMIFS<br>
+        COUNTIFS<br>
+        FILTER<br>
+        QUERY<br>
+        ARRAYFORMULA<br>
+        Pivot Tables<br>
+        Dashboards<br>
+        Data Cleaning
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>Data Analyst Interview Clearance</h3>
+
+    <p>
+      Created for Data Analyst Preparation & Interview Success
+    </p>
+
+  </footer>
+
+</body>
+
 </html>
