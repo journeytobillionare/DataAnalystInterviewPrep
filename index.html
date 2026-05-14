@@ -41,27 +41,25 @@
     header h1{
       font-size:clamp(2rem,5vw,4rem);
       margin-bottom:20px;
-      word-wrap:break-word;
     }
 
     header p{
       max-width:900px;
       margin:auto;
       font-size:clamp(1rem,2vw,1.3rem);
-      padding:0 10px;
     }
 
-    /* IMAGE SLIDER */
+    /* SLIDER */
 
     .slider{
       width:100%;
-      max-width:900px;
-      height:450px;
+      max-width:950px;
+      height:500px;
       margin:40px auto 0;
       overflow:hidden;
       border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.4);
       position:relative;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
     }
 
     .slides{
@@ -167,8 +165,6 @@
       margin-bottom:35px;
       box-shadow:0 5px 15px rgba(0,0,0,0.3);
       transition:0.3s;
-      overflow:hidden;
-      word-wrap:break-word;
     }
 
     .day-card:hover{
@@ -178,7 +174,7 @@
     .day-card h2{
       color:#60a5fa;
       margin-bottom:15px;
-      font-size:clamp(1.3rem,3vw,2rem);
+      font-size:clamp(1.4rem,3vw,2rem);
     }
 
     .section-title{
@@ -195,7 +191,6 @@
 
     li{
       margin-bottom:10px;
-      font-size:0.98rem;
     }
 
     /* FORMULA BOX */
@@ -208,7 +203,6 @@
       border-left:5px solid #3b82f6;
       overflow-x:auto;
       line-height:2;
-      width:100%;
     }
 
     .highlight{
@@ -220,14 +214,12 @@
 
     .table-wrapper{
       overflow-x:auto;
-      width:100%;
     }
 
     table{
       width:100%;
       border-collapse:collapse;
       margin-top:20px;
-      min-width:300px;
     }
 
     table th,
@@ -255,17 +247,14 @@
       font-size:1.5rem;
     }
 
-    footer p{
-      font-size:0.95rem;
-    }
-
-    /* MOBILE RESPONSIVE */
+    /* RESPONSIVE */
 
     @media(max-width:992px){
 
       .slider{
         height:380px;
       }
+
     }
 
     @media(max-width:768px){
@@ -280,23 +269,14 @@
 
       nav ul{
         gap:12px;
-        padding:12px;
       }
 
       nav a{
         font-size:0.85rem;
       }
 
-      .container{
-        width:94%;
-      }
-
       .day-card{
         padding:22px;
-      }
-
-      li{
-        font-size:0.92rem;
       }
 
       table th,
@@ -304,13 +284,10 @@
         padding:10px;
         font-size:0.9rem;
       }
+
     }
 
     @media(max-width:480px){
-
-      header{
-        padding:40px 10px;
-      }
 
       .slider{
         height:220px;
@@ -319,29 +296,16 @@
 
       .day-card{
         padding:18px;
-        border-radius:15px;
-      }
-
-      nav ul{
-        gap:10px;
       }
 
       nav a{
-        font-size:0.8rem;
+        font-size:0.75rem;
       }
 
       .formula-box{
-        padding:15px;
         font-size:0.9rem;
       }
 
-      li{
-        font-size:0.88rem;
-      }
-
-      footer h3{
-        font-size:1.2rem;
-      }
     }
 
   </style>
@@ -366,12 +330,12 @@
 
       <div class="slides">
 
-        <!-- PLACE YOUR PHOTOS IN SAME FOLDER -->
+        <!-- PUT YOUR IMAGES IN SAME FOLDER -->
 
-        <img src="photo 1.jpg" alt="Photo 1">
-        <img src="photo 2.jpg" alt="Photo 2">
-        <img src="photo 3.jpg" alt="Photo 3">
-        <img src="photo 4.jpg" alt="Photo 4">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
+        <img src="photo4.jpg" alt="Photo 4">
 
       </div>
 
@@ -398,7 +362,7 @@
 
   </nav>
 
-  <!-- MAIN CONTAINER -->
+  <!-- MAIN CONTENT -->
 
   <div class="container">
 
@@ -406,11 +370,11 @@
 
     <div class="day-card" id="day1">
 
-      <h2>Day 1 — Excel & Google Sheets Foundations</h2>
+      <h2>Day 1 — Foundations</h2>
 
       <p>
-        <span class="highlight">Main Goal:</span>
-        Understand spreadsheet basics and core formulas.
+        <span class="highlight">Goal:</span>
+        Learn spreadsheet basics and core formulas.
       </p>
 
       <h3 class="section-title">Topics</h3>
@@ -419,9 +383,8 @@
 
         <li>Rows, Columns, Cells</li>
         <li>Formatting</li>
-        <li>Autofill</li>
-        <li>Freeze Panes</li>
         <li>Sorting & Filtering</li>
+        <li>Freeze Panes</li>
         <li>Relative vs Absolute References</li>
 
       </ul>
@@ -436,9 +399,7 @@
         MAX<br>
         COUNT<br>
         COUNTA<br>
-        ROUND<br>
-        ROUNDUP<br>
-        ROUNDDOWN
+        ROUND
 
       </div>
 
@@ -456,14 +417,11 @@
         IFS<br>
         AND<br>
         OR<br>
-        NOT<br>
         IFERROR<br>
         COUNTIF<br>
         COUNTIFS<br>
         SUMIF<br>
-        SUMIFS<br>
-        AVERAGEIF<br>
-        AVERAGEIFS
+        SUMIFS
 
       </div>
 
@@ -473,7 +431,7 @@
 
     <div class="day-card" id="day3">
 
-      <h2>Day 3 — Lookup & Data Retrieval</h2>
+      <h2>Day 3 — Lookup Functions</h2>
 
       <div class="formula-box">
 
@@ -492,7 +450,7 @@
 
     <div class="day-card" id="day4">
 
-      <h2>Day 4 — Text & Data Cleaning</h2>
+      <h2>Day 4 — Data Cleaning</h2>
 
       <div class="formula-box">
 
@@ -502,14 +460,11 @@
         LEN<br>
         TRIM<br>
         SUBSTITUTE<br>
-        REPLACE<br>
         FIND<br>
         SEARCH<br>
         UPPER<br>
         LOWER<br>
-        PROPER<br>
-        TEXTJOIN<br>
-        CONCAT
+        PROPER
 
       </div>
 
@@ -519,7 +474,7 @@
 
     <div class="day-card" id="day5">
 
-      <h2>Day 5 — Date, Time & Dynamic Functions</h2>
+      <h2>Day 5 — Dynamic & Date Functions</h2>
 
       <div class="formula-box">
 
@@ -529,33 +484,11 @@
         YEAR<br>
         MONTH<br>
         DAY<br>
-        DATEDIF<br>
-        NETWORKDAYS<br>
-        EOMONTH
-
-      </div>
-
-      <h3 class="section-title">Dynamic Functions</h3>
-
-      <div class="formula-box">
-
         FILTER<br>
         SORT<br>
         UNIQUE<br>
-        SEQUENCE<br>
-        SORTBY
-
-      </div>
-
-      <h3 class="section-title">Google Sheets Special</h3>
-
-      <div class="formula-box">
-
         ARRAYFORMULA<br>
-        QUERY<br>
-        IMPORTRANGE<br>
-        SPARKLINE<br>
-        GOOGLETRANSLATE
+        QUERY
 
       </div>
 
@@ -565,16 +498,17 @@
 
     <div class="day-card" id="day6">
 
-      <h2>Day 6 — Pivot Tables, Charts & Dashboards</h2>
+      <h2>Day 6 — Dashboards & Charts</h2>
 
       <ul>
 
         <li>Pivot Tables</li>
         <li>Pivot Charts</li>
-        <li>Slicers</li>
         <li>Conditional Formatting</li>
         <li>Data Validation</li>
-        <li>Named Ranges</li>
+        <li>Bar Charts</li>
+        <li>Pie Charts</li>
+        <li>Line Charts</li>
 
       </ul>
 
@@ -584,12 +518,14 @@
 
     <div class="day-card" id="day7">
 
-      <h2>Day 7 — Real Projects + Interview Preparation</h2>
+      <h2>Day 7 — Projects & Interview Preparation</h2>
 
       <ul>
 
-        <li>Sales Analytics Dashboard</li>
+        <li>Sales Dashboard Project</li>
         <li>HR Analytics Dashboard</li>
+        <li>Portfolio Screenshots</li>
+        <li>Interview Revision</li>
 
       </ul>
 
@@ -621,7 +557,7 @@
           </tr>
 
           <tr>
-            <td>Mini Project</td>
+            <td>Projects</td>
             <td>2 Hours</td>
           </tr>
 
@@ -640,7 +576,7 @@
 
     <div class="day-card" id="interview">
 
-      <h2>Excel & Google Sheets Interview Questions & Answers</h2>
+      <h2>Interview Questions & Answers</h2>
 
       <h3 class="section-title">
         Difference between COUNT and COUNTA?
@@ -670,7 +606,7 @@
 
       <div class="formula-box">
 
-        VLOOKUP searches vertically and returns matching values.
+        VLOOKUP searches vertically in a table and returns matching values.
 
       </div>
 
@@ -680,7 +616,7 @@
 
       <div class="formula-box">
 
-        XLOOKUP can search both left and right and is more flexible.
+        XLOOKUP searches left and right and is more flexible.
 
       </div>
 
@@ -690,7 +626,7 @@
 
       <div class="formula-box">
 
-        QUERY retrieves structured data similar to SQL.
+        QUERY retrieves filtered data similar to SQL.
 
       </div>
 
@@ -700,7 +636,7 @@
 
       <div class="formula-box">
 
-        Pivot Tables summarize and analyze large datasets quickly.
+        Pivot Tables summarize large datasets quickly.
 
       </div>
 
@@ -715,7 +651,7 @@
     <h3>Data Analyst Interview Clearance</h3>
 
     <p>
-      Created for Data Analyst Preparation & Interview Success
+      Created for Excel & Google Sheets Interview Preparation
     </p>
 
   </footer>
